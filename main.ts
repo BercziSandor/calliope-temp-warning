@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
     
-    limit += -1
+    limit += -11
     basic.showNumber(limit)
     basic.pause(1000)
     basic.clearScreen()

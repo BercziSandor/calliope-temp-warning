@@ -1,6 +1,6 @@
 def on_button_pressed_a():
     global limit
-    limit += -1
+    limit += -11
     basic.show_number(limit)
     basic.pause(1000)
     basic.clear_screen()
