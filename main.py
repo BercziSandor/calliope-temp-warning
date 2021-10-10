@@ -19,16 +19,17 @@ def on_button_pressed_b():
     basic.pause(1000)
     basic.clear_screen()
 input.on_button_pressed(Button.B, on_button_pressed_b)
-
 limit = 0
 limit = 25
 
 def on_forever():
     if input.temperature() < limit:
         basic.set_led_color(0x00ff00)
+        basic.show_string("OK: " + str(input.temperature()) +"<"+str(limit) )
+        basic.show_number(input.temperature())
     else:
         basic.set_led_color(0xff0000)
-        basic.show_number(input.temperature())
+        basic.show_string("! HOT ! " + str(limit) + "<" +str(input.temperature()))
         music.play_tone(494, music.beat(BeatFraction.QUARTER))
     basic.pause(1000)
     basic.set_led_color(Colors.OFF)
